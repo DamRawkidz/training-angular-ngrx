@@ -1,0 +1,3 @@
+install guide
+npm install @ngrx/store @ngrx/effects @ngrx/router-store @ngrx/store-devtools @ngrx/schematics
+
