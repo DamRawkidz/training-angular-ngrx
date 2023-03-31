@@ -11,6 +11,12 @@ import { AppComponent } from './app.component';
 import { appReducers } from './state/app-reducer';
 import { RxjsComponentComponent } from './rxjs-components/rxjs-component/rxjs-component.component';
 import { RxjsComponentTwoComponent } from './rxjs-components/rxjs-component-two/rxjs-component-two.component';
+import { NgrxComponentComponent } from './ngrx.components/ngrx-component/ngrx-component.component';
+import { NgrxComponentTwoComponent } from './ngrx.components/ngrx-component-two/ngrx-component-two.component';
+import { AppStateModule } from './app-state/app-state.module';
+
+
+
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return function(state, action) {
     console.log('state', state);
@@ -23,11 +29,14 @@ export const metaReducers: MetaReducer<any>[] = [debug];
   declarations: [
     AppComponent,
     RxjsComponentComponent,
-    RxjsComponentTwoComponent
+    RxjsComponentTwoComponent,
+    NgrxComponentComponent,
+    NgrxComponentTwoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // AppStateModule,
     StoreModule.forRoot(appReducers,{
       metaReducers,
       runtimeChecks:{

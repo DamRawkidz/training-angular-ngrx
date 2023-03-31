@@ -1,9 +1,10 @@
 import { ActionReducerMap } from '@ngrx/store';
+import { AppNGRXtrainingState, appStateReducer } from '../app-state/reducer/app-reducer.reducer';
 
 export interface AppState {
-    // new state
+    appState: AppNGRXtrainingState
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
-    // handle new state
+  appState: appStateReducer
 }
