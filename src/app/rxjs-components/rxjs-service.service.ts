@@ -7,6 +7,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class RxjsServiceService {
   subjectEvent$ = new Subject();
   behaviorEvent$ = new BehaviorSubject(null);
+
   constructor() { }
 
 

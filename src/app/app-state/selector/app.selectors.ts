@@ -11,3 +11,8 @@ export const selectCounter = createSelector(
   selectApp,
   state => state.counter
 )
+
+export const selectMockData = createSelector(
+  selectApp,
+  state => state.loadResult.result
+)

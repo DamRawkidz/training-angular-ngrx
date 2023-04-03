@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MockApiService } from 'src/app/mock-api/mock-api.service';
 import { RxjsServiceService } from '../rxjs-service.service';
 
 @Component({
@@ -10,12 +11,13 @@ export class RxjsComponentComponent implements OnInit,OnDestroy {
   counter: number = 0
 
   constructor(
-    private rxjsSV: RxjsServiceService
+    private rxjsSV: RxjsServiceService,
   ){
   }
 
 
   ngOnInit(): void {
+
 
   }
 

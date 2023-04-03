@@ -36,7 +36,7 @@ export const metaReducers: MetaReducer<any>[] = [debug];
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AppStateModule,
+    AppStateModule,
     StoreModule.forRoot(appReducers,{
       metaReducers,
       runtimeChecks:{
